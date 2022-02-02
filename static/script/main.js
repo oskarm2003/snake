@@ -163,25 +163,46 @@ function move(x, y) {
                 }
                 if (snake.direction != snake.previousMv && gameArray[i][j] == 2) {
                     document.getElementById(`${i}.${j}`).innerHTML = settings.turn
-                    if (gameArray?.[i]?.[j + 1] > 0) {
-                        if (gameArray?.[i + 1]?.[j] > 0) {
+                    if (snake.direction == "right") {
+                        if (snake.previousMv == "down") {
+                            document.getElementById("turn").style.transform = "scaleX(-1)"
+                            // document.getElementById("turn").style.transform += "scaleY(-1)"
+                            document.getElementById("turn").setAttribute("id", "")
+                        }
+                        else if (snake.previousMv == "up") {
                             document.getElementById("turn").style.transform = "scaleX(-1)"
                             document.getElementById("turn").style.transform += "scaleY(-1)"
                             document.getElementById("turn").setAttribute("id", "")
                         }
-                        else if (gameArray?.[i - 1]?.[j] > 0) {
+                    }
+                    else if (snake.direction == "left") {
+                        if (snake.previousMv == "down") {
+                            document.getElementById("turn").style.transform = "scaleX(1)"
+                            document.getElementById("turn").setAttribute("id", "")
+                        }
+                        else if (snake.previousMv == "up") {
+                            document.getElementById("turn").style.transform = "scaleY(-1)"
+                            document.getElementById("turn").setAttribute("id", "")
+                        }
+                    }
+                    else if (snake.direction == "up") {
+                        if (snake.previousMv == "right") {
+                            document.getElementById("turn").style.transform = "scaleX(1)"
+                            document.getElementById("turn").setAttribute("id", "")
+                        }
+                        else if (snake.previousMv == "left") {
                             document.getElementById("turn").style.transform = "scaleX(-1)"
                             document.getElementById("turn").setAttribute("id", "")
                         }
                     }
-                    else if (gameArray?.[i]?.[j - 1] > 0) {
-                        if (gameArray?.[i + 1]?.[j] > 0) {
+                    else if (snake.direction == "down") {
+                        if (snake.previousMv == "right") {
                             document.getElementById("turn").style.transform = "scaleY(-1)"
-                            document.getElementById("turn").style.transform += "scaleX(1)"
                             document.getElementById("turn").setAttribute("id", "")
                         }
-                        else if (gameArray?.[i - 1]?.[j] > 0) {
-                            document.getElementById("turn").style.transform = "scaleX(1)"
+                        else if (snake.previousMv == "left") {
+                            document.getElementById("turn").style.transform = "scaleY(-1)"
+                            document.getElementById("turn").style.transform += "scaleX(-1)"
                             document.getElementById("turn").setAttribute("id", "")
                         }
                     }
