@@ -31,7 +31,7 @@ body {
     float: left;
 }
 
-.snake {
+.snake, .body{
     position: absolute;
     width: 50px;
     height: 50px;
@@ -55,4 +55,10 @@ body {
     font-size: 5vh;
     text-align: center;
     background-color: #00000070;
+}
+
+#mouse {
+    position: absolute;
+    width: 50px;
+    height: 50px;
 }

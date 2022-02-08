@@ -1,3 +1,6 @@
+let z = Math.floor(Math.random() * 4)
+const type = ["snake1", "snake2", "snake3", "snake4"]
+
 const snake = {
     len: 3,
     direction: "right",
@@ -9,10 +12,10 @@ const settings = {
     height: 20,
     width: 20,
     apple: `<img id="apple" src="images/apple.svg"></img>`,
-    head: `<img class="snake" id="head" src="images/head.svg"></img>`,
-    body: `<img class="snake" class="body" id="body" src="images/body.svg"></img>`,
-    tail: `<img class="snake" id="tail" src="images/tail.svg"></img>`,
-    turn: `<img class="snake" id="turn" src="images/curve.svg"></img>`
+    head: `<img class="snake" id="head" src="images/${type[z]}/head.svg"></img>`,
+    body: `<img class="body" id="body" src="images/${type[z]}/body.svg"></img>`,
+    tail: `<img class="snake" id="tail" src="images/${type[z]}/tail.svg"></img>`,
+    turn: `<img class="snake" id="turn" src="images/${type[z]}/curve.svg"></img>`
 }
 
 const positions = [
@@ -24,13 +27,20 @@ const positions = [
     {
         x: null,
         y: null
-    }
+    },
     // head position ^
+    {
+        x: null,
+        y: null
+    }
+    // mouse position ^
 ]
 
 let gameArray = [[]]
 
 let first = 1
+
+let mouseMove
 
 function createGameboard() {
     let gameboard = document.createElement("div")
@@ -74,7 +84,7 @@ function randomApple() {
 
 function eatApple() {
     snake.len += 1
-    document.getElementById("score").innerText = `Snake Lenght: ${snake.len}`
+    document.getElementById("score").innerText = `Snake Length: ${snake.len}`
     document.getElementById("apple").style.width = "50%"
     document.getElementById("apple").style.height = "50%"
     document.getElementById("apple").style.top = "25%"
@@ -85,10 +95,37 @@ function eatApple() {
     }, 200)
 }
 
+function mouse() {
+    let pass = 0
+    let x, y
+    let mouse = document.createElement("img")
+    mouse.id = "mouse"
+    mouse.setAttribute("src", "images/mouse.svg")
+    document.getElementById("gameboard").append(mouse)
+    mouseMove = setInterval(() => {
+        while (pass == 0) {
+            x = Math.floor(Math.random() * settings.width) - 1
+            y = Math.floor(Math.random() * settings.height) - 1
+            if (gameArray[x][y] == 0) {
+                pass = 1
+            }
+        }
+        document.getElementById("mouse").style.left = x * 50 + "px"
+        document.getElementById("mouse").style.top = y * 50 + "px"
+        positions[2].x = document.getElementById("mouse").offsetLeft
+        positions[2].y = document.getElementById("mouse").offsetTop
+    }, 2000)
+    setTimeout(() => {
+        clearInterval(mouseMove)
+        document.getElementById("mouse").remove()
+    }, 10000)
+
+}
+
 function start() {
     let score = document.createElement("p")
     score.id = "score"
-    score.innerText = `Snake Lenght: ${snake.len}`
+    score.innerText = `Snake Length: ${snake.len}`
     document.body.append(score)
     gameArray[Math.floor(settings.width / 2)][Math.floor(settings.height / 2)] = 1
     gameArray[Math.floor(settings.width / 2)][Math.floor(settings.height / 2) - 1] = 2
@@ -152,14 +189,23 @@ function move(x, y) {
                 }
                 if (gameArray[i][j] == 2) {
                     document.getElementById(`${i}.${j}`).innerHTML = settings.body
-                    if (snake.previousMv == "right" || snake.previousMv == "left") {
+                    if (snake.previousMv == "right") {
                         document.getElementById("body").style.transform = "rotate(0deg)"
                         document.getElementById("body").setAttribute("id", "")
                     }
-                    if (snake.previousMv == "up" || snake.previousMv == "down") {
+                    if (snake.previousMv == "left") {
+                        document.getElementById("body").style.transform = "rotate(180deg)"
+                        document.getElementById("body").setAttribute("id", "")
+                    }
+                    if (snake.previousMv == "down") {
+                        document.getElementById("body").style.transform = "rotate(90deg)"
+                        document.getElementById("body").setAttribute("id", "")
+                    }
+                    if (snake.previousMv == "up") {
                         document.getElementById("body").style.transform = "rotate(-90deg)"
                         document.getElementById("body").setAttribute("id", "")
                     }
+
                 }
                 if (snake.direction != snake.previousMv && gameArray[i][j] == 2) {
                     document.getElementById(`${i}.${j}`).innerHTML = settings.turn

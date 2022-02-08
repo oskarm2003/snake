@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100mm"
+   height="100mm"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="tail.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="370.77143"
+     inkscape:cy="55.486765"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1560"
+     inkscape:window-height="1198"
+     inkscape:window-x="984"
+     inkscape:window-y="148"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect833"
+       style="opacity:1;fill:#f9f9f9;stroke-width:0.221999"
+       d="M 25.723875,53.070585 C 21.164,33.805424 57.239443,29.333829 71.626488,27.877976 76.754867,27.462704 82.24965,27.413837 87.879464,27.5 H 100 v 45 H 89.769345 C 82.702159,71.996032 76.74165,71.492064 72.193453,70.988096 55.50475,69.291807 26.556655,71.074019 25.723875,53.070585 Z"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       id="rect833-0"
+       style="fill:#ff9955;stroke-width:0.221999"
+       d="m 83.922672,27.465541 c -10.46045,15.12641 -9.692229,29.972102 0,44.594695 1.860667,0.146571 3.791268,0.293192 5.846673,0.439764 H 99.958904 V 27.500164 H 87.879537 c -1.327735,-0.02032 -2.647188,-0.03236 -3.956865,-0.03462 z"
+       sodipodi:nodetypes="ccccccsc" />
+  </g>
+</svg>

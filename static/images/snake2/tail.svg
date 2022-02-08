@@ -13,7 +13,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
-   sodipodi:docname="body.svg">
+   sodipodi:docname="tail.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -23,17 +23,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="-127.23847"
-     inkscape:cy="267.28165"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="374.23918"
+     inkscape:cy="74.523837"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1560"
      inkscape:window-height="1198"
-     inkscape:window-x="888"
-     inkscape:window-y="99"
+     inkscape:window-x="984"
+     inkscape:window-y="150"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
@@ -51,26 +51,15 @@
      inkscape:label="Warstwa 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="opacity:1;fill:#aa0000;stroke-width:0.277497"
+    <path
        id="rect833"
-       width="110"
-       height="45"
-       x="-5"
-       y="27.5" />
-    <rect
-       style="fill:#333333;stroke-width:0.40131"
-       id="rect835-8"
-       width="60"
-       height="45"
-       x="20.087502"
-       y="27.5" />
-    <rect
-       style="fill:#ececec;stroke-width:0.324046"
-       id="rect857-8"
-       width="30"
-       height="45"
-       x="35"
-       y="27.5" />
+       style="opacity:1;fill:#333333;stroke-width:0.221999"
+       d="M 25.723875,53.070585 C 21.164,33.805424 57.239443,29.333829 71.626488,27.877976 76.754867,27.462704 82.24965,27.413837 87.879464,27.5 H 100 v 45 H 89.769345 C 82.702159,71.996032 76.74165,71.492064 72.193453,70.988096 55.50475,69.291807 26.556655,71.074019 25.723875,53.070585 Z"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       id="rect833-0"
+       style="fill:#f2f2f2;stroke-width:0.221999"
+       d="m 83.922672,27.465541 c -18.085614,19.838442 -9.896649,32.451375 0,44.594695 1.860667,0.146571 3.791268,0.293192 5.846673,0.439764 H 99.958904 V 27.500164 H 87.879537 c -1.327735,-0.02032 -2.647188,-0.03236 -3.956865,-0.03462 z"
+       sodipodi:nodetypes="ccccccsc" />
   </g>
 </svg>
