@@ -47,7 +47,7 @@ body {
     z-index: 1;
 }
 
-#score {
+#score, #msg {
     font-family: 'Mochiy Pop P One', sans-serif;
     margin-top: 5px;
     padding: 5px;
@@ -55,6 +55,20 @@ body {
     font-size: 5vh;
     text-align: center;
     background-color: #00000070;
+}
+
+#msg {
+    position: absolute;
+    top: 37.5%;
+    font-size: 3vh;
+    z-index: 10;
+}
+
+#reset {
+    color: black;
+    text-align: center;
+    margin-top:0;
+    margin-bottom: 1%;
 }
 
 #mouse {
